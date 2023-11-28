@@ -23,7 +23,5 @@ public class ResourceExceptionHandler {
 				request.getRequestURI());
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
 	}
-	
-	
-	
+
 }
