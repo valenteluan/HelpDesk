@@ -10,13 +10,23 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.project.HelpDesk.domain.Tecnico;
 import com.project.HelpDesk.domain.enums.Perfil;
 
+import jakarta.validation.constraints.NotNull;
+
 public class TecnicoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	protected Integer id;
+	
+	@NotNull(message = "Campo NOME deve ser preenchido!")
 	protected String nome;
+	
+	@NotNull(message = "Campo CPF deve ser preenchido!")
 	protected String cpf;
+	
+	@NotNull(message = "Campo EMAIL deve ser preenchido!")
 	protected String email;
+	
+	@NotNull(message = "Campo SENHA deve ser preenchido!")
 	protected String senha;
 	protected Set<Integer> perfis = new HashSet<>();
 
